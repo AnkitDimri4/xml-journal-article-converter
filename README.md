@@ -56,6 +56,7 @@ pip install -r requirements.txt
 
 ```txt
 lxml>=4.9
+python-docx>=0.8
 ```
 
 If you need DOCX support later, you can add:
