@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>XML Journal Article Converter – Project Summary</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <h1>Building an XML Journal Article Converter as an Intern Project</h1>
+        <p class="author-line">
+          Ankit Dimri – Full‑Stack Developer • Dehradun, India
+        </p>
+
+        <p class="abstract-label">Abstract</p>
+        <p class="abstract">
+          This project implements an XML Journal Article Converter in Python
+          that parses simple journal‑style HTML into a JATS‑inspired XML
+          structure. The tool extracts the article title, authors, abstract,
+          sections, and references and outputs a clean, machine‑readable XML
+          file suitable for journal editorial and QA workflows.
+        </p>
+
+        <h2>Introduction</h2>
+        <p>
+          Many journals rely on XML, especially JATS, to ensure their articles
+          are searchable, reusable, and machine‑readable. For this internship
+          project, I built a small but realistic converter that transforms
+          author‑submitted HTML into a structured XML article tree aligned with
+          JATS‑style tagging (&lt;article&gt;, &lt;front&gt;, &lt;body&gt;,
+          &lt;back&gt;, sections, and reference list).
+        </p>
+
+        <h2>Methods</h2>
+        <p>
+          The converter is written in Python using the <code>lxml</code>
+          library. It parses the source HTML and identifies the main heading as
+          the article title, the first paragraph as the author line, a dedicated
+          abstract paragraph, and subsequent headings and paragraphs as
+          sections. A "References" heading marks the start of the reference
+          list, which is emitted as a <code>&lt;ref-list&gt;</code> element in
+          the back section.
+        </p>
+        <p>
+          These elements are mapped into an XML tree with explicit
+          <code>&lt;front&gt;</code> (title, authors, abstract),
+          <code>&lt;body&gt;</code> (section structure), and
+          <code>&lt;back&gt;</code> (references) nodes. The final output is a
+          well‑formed, pretty‑printed XML file that can be inspected manually or
+          integrated into automated QA checks.
+        </p>
+
+        <h2>Results</h2>
+        <p>
+          The current version exposes a simple command‑line interface:
+          <code>python convert.py input.html output.xml</code>. This makes it
+          easy to test locally and to plug into scripts or CI pipelines for bulk
+          conversion or regression tests. The codebase is modular, with separate
+          components for HTML parsing and XML construction, so it can be
+          extended to support DOCX input or richer JATS tagging if required.
+        </p>
+
+        <h2>Relevance to XML Conversion Specialist Role</h2>
+        <p>
+          This project demonstrates my ability to work directly with XML and
+          JATS‑style structures, understand publishing workflows, and build
+          reliable conversion pipelines. I am comfortable reading
+          specifications, structuring content into semantic tags, and writing
+          maintainable code that can be integrated into existing editorial or QA
+          processes.
+        </p>
+
+        <h2>Author and Links</h2>
+        <p>
+          I am a full‑stack developer experienced with Next.js, Node.js,
+          Express, MongoDB, and Docker, and I enjoy building end‑to‑end
+          solutions with clear architecture and strong engineering practices.
+        </p>
+        <div class="button-row">
+          <a
+            class="btn btn-primary"
+            href="https://portfolio-nine-orcin-33.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Portfolio
+          </a>
+          <a
+            class="btn btn-outline"
+            href="https://github.com/AnkitDimri4"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View GitHub Profile
+          </a>
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/AnkitDimri4/xml-journal-article-converter.git"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Converter Source Code
+          </a>
+        </div>
+
+        <h2>References</h2>
+        <div class="references">
+          <p>
+            [1] Journal Article Tag Suite (JATS), NISO standard for journal
+            article XML.
+          </p>
+          <p>
+            [2] XML Journal Article Converter – project repository by Ankit
+            Dimri.
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
