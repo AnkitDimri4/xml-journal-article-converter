@@ -2,6 +2,8 @@
 
 Python-based **XML Journal Article Converter** that takes a simple journal‑style HTML file and generates a JATS‑inspired XML article. The tool extracts the article title, authors, abstract, sections, and references, and outputs a clean, machine‑readable XML file suitable for editorial and QA workflows.
 
+> ##### Live Link : https://ankitdimri4.github.io/xml-journal-article-converter/
+
 ## Features
 
 - Parses journal‑style HTML articles using `lxml`
